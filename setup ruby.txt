@@ -1,0 +1,12 @@
+Steps followed 
+taken from - https://rapidapi.com/blog/how-to-use-the-yahoo-finance-api/#ruby
+
+Installing ruby 
+1. brew install rbenv ruby-build
+2. rbenv install -l	# list all available versions:
+3. rbenv install 2.4.1	# install a Ruby version:
+4. rbenv local 2.4.1	# set ruby version for a specific dir
+5. rbenv global 2.4.1	# set ruby version globally
+6. gem update --system	# rbenv rehash
+
+install unirest 
