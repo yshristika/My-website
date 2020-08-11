@@ -1,17 +1,23 @@
 require 'sinatra'
+require 'sinatra/reloader' if development?
 require 'json'
 require 'iex-ruby-client'
+require 'erb'
 
 get '/' do
   get_summary
 end
 
 get '/signup' do
-  "This is the signup page!"
+#  a = "This is the signup page!"
+#  a
+  name = "Whatznear";
+  ERB.new("<h1>Hello ERB World!! </h1><h3><%= name %></h3>").result(binding)
 end
 
 get '/lastpage?' do
-  "Now, this is the last page! #{params[:name]}"
+#  "Now, this is the last page! #{params[:name]}"
+  erb :layout
 end
 
 
@@ -31,13 +37,14 @@ def get_summary
       endpoint: 'https://sandbox.iexapis.com/v1'
     )
     client.get('ZNGA') rescue nil
-    news = client.news('MSFT',5)
-    puts news
-    news
+#    news = client.news('MSFT',5)
+#    puts news
+#    news
     quote = client.quote('ZNGA')
     puts quote
-    quote.to_s
-    quote2 = client.quote('TSLA')
-    puts quote2
-    quote2.to_s
+    quote.to_json
+    ERB.new("<h3><%= quote.to_json %></h3>").result(binding)
+#    quote2 = client.quote('TSLA')
+#    puts quote2
+#    quote2.to_s
 end
