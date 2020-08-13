@@ -22,8 +22,8 @@ end
 
 
 def get_summary
-  api_publishable = "Tpk_12fb6a0c27274cd89a17ba487cffc543"
-  api_secret_key = "Tsk_a5cffe3f20634c84954c73b588ee69e4" 
+  api_publishable = "SENSITIVE DATA"
+  api_secret_key = "SENSITIVE DATA" 
   
 #  IEX::Api.configure do |config|
 #    config.publishable_token = api_publishable # defaults to ENV['IEX_API_PUBLISHABLE_TOKEN']
