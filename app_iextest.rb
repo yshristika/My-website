@@ -32,8 +32,8 @@ def get_summary
     #'https://cloud.iexapis.com/v1' # use 'https://sandbox.iexapis.com/v1' for Sandbox
     
     client = IEX::Api::Client.new(
-      publishable_token: 'Tpk_12fb6a0c27274cd89a17ba487cffc543',
-      secret_token: 'Tsk_a5cffe3f20634c84954c73b588ee69e4',
+      publishable_token: 'SENSITIVE DATA',
+      secret_token: 'SENSITIVE DATA',
       endpoint: 'https://sandbox.iexapis.com/v1'
     )
     client.get('ZNGA') rescue nil
